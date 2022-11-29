@@ -1,0 +1,49 @@
+.node-view {
+    display: flex;
+    align-items: center;
+}
+
+.node-view:hover {
+    background-color: lightgray;
+}
+
+.ip {
+    width: 150px;
+}
+
+.loading {
+    color: gray;
+    font-style: italic;
+}
+
+.height {
+    width: 80px;
+    margin: 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.account {
+    width: 300px;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.error {
+    color: red;
+}
+
+.old-height {
+    color: brown;
+    background-color: #fcc;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sync-status {
+    width: 200px;
+    margin: 0 10px;
+}
