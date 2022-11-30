@@ -34,7 +34,7 @@ function App() {
 
       setHighestHeight(highestHeight);
     });
-    nodes.addNode('34.81.236.186');
+    nodes.addNode('35.192.7.154');
   }, []);
   return (
     <NodesView nodes={nodes} highestHeight={highestHeight} />

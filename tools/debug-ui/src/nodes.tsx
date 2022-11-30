@@ -53,8 +53,8 @@ export interface NetworkInfoView {
     num_connected_peers: number,
     connected_peers: PeerInfoView[],
     known_producers: KnownProducerView[],
-    tier1_accounts_data: AccountData[],
-    tier1_connections: PeerInfoView[],
+    tier1_accounts_data?: AccountData[],
+    tier1_connections?: PeerInfoView[],
 }
 
 export interface CatchupStatusView {
@@ -213,8 +213,10 @@ export class NearNodes {
         for (const peer of networkInfo.connected_peers) {
             newAddrs.push(peer.addr);
         }
-        for (const peer of networkInfo.tier1_connections) {
-            newAddrs.push(peer.addr);
+        if (networkInfo.tier1_connections) {
+            for (const peer of networkInfo.tier1_connections) {
+                newAddrs.push(peer.addr);
+            }
         }
         for (const addr of newAddrs) {
             const ip = addr.split(':')[0];
